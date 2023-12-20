@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details from Reqres API</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #f9f3eb;
+
+        }
+
+        header {
+            display: none;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        .main {
+            /* display: none; */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: sans-serif;
+            width: 300px;
+            text-align: center;
+            background-color: #ECECEC;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 0px #ff5252;
+
+        }
+
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            /* border: 1px solid red; */
+        }
+
+        .container img {
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .container div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            height: 200px;
+            transition: transform 0.3s ease;
+        }
+
+        .container div:hover {
+            background-color: #FFEED9;
+            transform: scale(1.1);
+        }
+
+
+        .main h2 {
+            margin-bottom: 30px;
+        }
+
+        .comic-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #ff5252;
+            /* border: 2px solid #000; */
+            border-radius: 10px;
+            box-shadow: 5px 5px 0px #303030;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .comic-button:hover {
+            background-color: #fff;
+            color: #ff5252;
+            border: 2px solid #ff5252;
+            box-shadow: 5px 5px 0px #ff5252;
+        }
+
+        .comic-button:active {
+            background-color: #fcf414;
+            box-shadow: none;
+            transform: translateY(4px);
+        }
+
+
+        @media (width<600px) {
+            .container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <h2>Fetch User Data</h2>
+        <button class="comic-button">Click me!</button>
+    </div>
+
+
+    <header>
+        <h1>User Details</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- Card -->
+        <!-- <div>
+            <img src="https://reqres.in/img/faces/2-image.jpg" alt="">
+            <h3>Gorger</h3>
+            <h2>gore@gmail.com</h2>
+
+        </div> -->
+        <!-- Card -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+<script src="index.js"></script>
